@@ -1,0 +1,37 @@
+extends layout
+
+block main
+  main
+    section#intro-text
+      span Simple Kitchen
+        h3.newheading
+          | Simple &amp; Comforting 
+          br
+          |             Recipes All Year Round
+    section#intro-image
+      
+      -data = data || {}
+      if errors
+          ul.my-errors
+              for error in errors
+                  li= error.msg
+      h3.myheading Register to subscribe
+      form(action="." method="POST" class="form-registration")
+          label(for="name") Name:
+          input(
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              value=data.name
+          )
+
+          label(for="email") Email:
+          input(
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              value=data.email
+          )
+          button(class="mybutton" type="submit" value="Register") Register

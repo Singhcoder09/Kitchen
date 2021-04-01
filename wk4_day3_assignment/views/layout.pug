@@ -1,0 +1,50 @@
+//- doctype html
+//- html
+//-   head
+//-     title= `${title}`
+//-     link(rel='stylesheet', href='/css/bootstrap.min.css')
+//-     link(rel='stylesheet', href='/css/styles.css')
+
+//-   body
+//-     div.container.listing-reg
+//-       h1 My Amazing App
+
+//-       block content
+
+doctype html
+html
+  head
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+    link(rel='StyleSheet' href='css/nav.css' type='text/css')
+    script(src='script.js')
+
+  body
+    header
+      nav
+        ul
+          li
+            a(href='/') Home
+          li |
+          li
+            a(href='#') Blog
+          li.regform
+            a(href='register') Register
+
+           
+
+    block main
+      main
+        section#intro-text
+          span Simple Kitchen
+          h3.newheading
+            | Simple &amp; Comforting 
+            br
+            |             Recipes All Year Round
+          p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
+          button.submit-buttton View Recipes
+        section#intro-image
+          img(src='images/louisiana-barbecued-shrimp.webp' alt='Louisiana Barbecued Shrimp')
+    footer
+      | &copy; Copyright 2021  
